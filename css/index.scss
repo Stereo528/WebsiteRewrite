@@ -66,17 +66,30 @@ body {
     position: inherit;
 }
 
-nav {
-    @include navLayout;
-}
-
-.nav-dark-mode {
+@media (prefers-color-scheme: light) {
     nav {
-        @include navLayout( #333, white, #555);
+        @include navLayout;
+    }
+    body {
+        padding-top: 40px;
+        font-family: Poppins;
+        text-align: center;
+        transition: background-color 1s, color 1s;
+        background-color: #EEE;
+        color: #424a4f;
     }
 }
 
-.dark-mode {
-    background-color: #333;
-    color: white;
+@media (prefers-color-scheme: dark) {
+    nav {
+        @include navLayout( #555, white, #777);
+    }
+    body {
+        padding-top: 40px;
+        font-family: Poppins;
+        text-align: center;
+        transition: background-color 1s, color 1s;
+        background-color: #333;
+        color: white;
+    }
 }
