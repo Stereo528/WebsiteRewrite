@@ -28,7 +28,7 @@ nav ul {
   font-family: Poppins;
   font-size: 20px;
   text-align: center;
-  color: #555;
+  color: #222;
 }
 nav li {
   display: inline-block;
@@ -42,10 +42,12 @@ nav a {
   width: 100px;
   line-height: 50px;
   text-decoration: none;
+  transition: background-color 0.5s, transform 0.5s;
 }
 nav a:hover {
   background-color: #AAA;
   text-decoration: underline;
+  transform: scale(1.25);
 }
 
 /*# sourceMappingURL=index.css.map */
