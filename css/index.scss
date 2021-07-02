@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-body {
+@mixin defaultBody($bg-color: #EEE, $txt-color: #424a4f) {
     padding-top: 40px;
     font-family: Poppins;
     text-align: center;
     transition: background-color 1s, color 1s;
-    background-color: #EEE;
-    color: #424a4f;
+    background-color: $bg-color;
+    color: $txt-color;
 }
 
 
@@ -52,31 +52,12 @@ body {
         }
 }
 
-.hell {
-    width: 50px;
-    height: 50px;
-    left: 10px;
-    position: inherit;
-}
-.helly {
-    width: 45px;
-    height: 45px;
-    left: 12px;
-    top: 7px;
-    position: inherit;
-}
-
 @media (prefers-color-scheme: light) {
     nav {
         @include navLayout;
     }
-    body {
-        padding-top: 40px;
-        font-family: Poppins;
-        text-align: center;
-        transition: background-color 1s, color 1s;
-        background-color: #EEE;
-        color: #424a4f;
+    body{ 
+        @include defaultBody;
     }
 }
 
@@ -85,11 +66,6 @@ body {
         @include navLayout( #555, white, #777);
     }
     body {
-        padding-top: 40px;
-        font-family: Poppins;
-        text-align: center;
-        transition: background-color 1s, color 1s;
-        background-color: #333;
-        color: white;
+        @include defaultBody($bg-color: #333, $txt-color: white);
     }
 }
