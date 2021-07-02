@@ -33,6 +33,7 @@
     line-height: 50px;
     text-decoration: none;
     transition: background-color 0.5s, transform 0.5s;
+    color: #222;
   }
   nav a:hover {
     background-color: #aaa;
@@ -83,6 +84,7 @@
     line-height: 50px;
     text-decoration: none;
     transition: background-color 0.5s, transform 0.5s;
+    color: white;
   }
   nav a:hover {
     background-color: #777;
