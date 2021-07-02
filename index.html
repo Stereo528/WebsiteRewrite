@@ -13,26 +13,40 @@
         <link rel="stylesheet" href="out/index.css">
         <title>Stereo528 - Home</title>
     </head>
-    
+
     <body>
 
         <nav class="topnav">
+            
             <ul>
+                <button class="hell" onclick="dark()">
+                    <img src="icon.ico" class="helly">
+                </button>
                 <li><a>Home</a></li>
-                <li><a>Packs</a></li>
-                <li><a>Mods</a></li>
+                <li><a>Minecraft</a></li>
                 <li><a>Other</a></li>
             </ul>
         </nav>
+
+
 
 
         <div class="header">
             <h1>Stereo528</h1>
         </div>
         <div class="about">
-            <p>Hi, I'm Stereo528! I am a Non-Binary Teenager who loves (Pixel) Art, Video Games, and does coding in their freetime.</p>
+            <p>Hi, I'm Stereo528! I am a Non-Binary Teenager who loves (Pixel) Art, Video Games, and does coding in their freetime.<br></p>
         </div>
         <div class="social-links">
         </div>
+
+        <script>
+            function dark() {
+                var body = document.body;
+                body.classList.toggle("dark-mode");
+                var nav = document.nav;
+                nav.classList.toggle("nav-dark-mode");
+            }
+        </script>
     </body>
 </html>

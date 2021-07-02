@@ -1,13 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-html {
-  background-color: #EEE;
-  color: #424a4f;
-}
-
 body {
   padding-top: 40px;
   font-family: Poppins;
   text-align: center;
+  transition: background-color 1s, color 1s;
+  background-color: #EEE;
+  color: #424a4f;
+}
+
+.hell {
+  width: 50px;
+  height: 50px;
+  left: 10px;
+  position: inherit;
+}
+
+.helly {
+  width: 45px;
+  height: 45px;
+  left: 12px;
+  top: 7px;
+  position: inherit;
 }
 
 nav ul {
@@ -17,7 +30,7 @@ nav ul {
   width: 100%;
   height: 60px;
   display: flex;
-  background-color: #BBB;
+  background-color: #bbb;
   overflow: hidden;
   justify-content: center;
   align-content: center;
@@ -45,9 +58,54 @@ nav a {
   transition: background-color 0.5s, transform 0.5s;
 }
 nav a:hover {
-  background-color: #AAA;
+  background-color: #aaa;
   text-decoration: underline;
   transform: scale(1.25);
+}
+
+.nav-dark-mode nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  background-color: #333;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  position: fixed;
+  font-family: Poppins;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+.nav-dark-mode nav li {
+  display: inline-block;
+}
+.nav-dark-mode nav a {
+  display: block;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-right: 5px;
+  height: 50px;
+  width: 100px;
+  line-height: 50px;
+  text-decoration: none;
+  transition: background-color 0.5s, transform 0.5s;
+}
+.nav-dark-mode nav a:hover {
+  background-color: #555;
+  text-decoration: underline;
+  transform: scale(1.25);
+}
+
+.dark-mode {
+  background-color: #333;
+  color: white;
 }
 
 /*# sourceMappingURL=index.css.map */
