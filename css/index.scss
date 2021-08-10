@@ -1,55 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@mixin defaultBody($bg-color: #EEE, $txt-color: #424a4f) {
-    padding-top: 40px;
-    font-family: Poppins;
-    text-align: center;
-    transition: background-color 1s, color 1s;
+
+@mixin defaultBody($bg-color: #ddddff, $txt-color: #424a4f) {
     background-color: $bg-color;
     color: $txt-color;
 }
 
-
-@mixin navLayout($ul-color: #bbb, $text-color: #222, $hover-color: #aaa) {
+@mixin navLayout($ul-color: #bbbbdd, $text-color: #222, $hover-color: #aaaacc) {
     ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        width: 100%;
-        height: 60px;
-        display: flex;
         background-color: $ul-color;
-        overflow: hidden;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        left: 0;
-        top: 0;
-        position: fixed;
-        font-family: Poppins;
-        font-size: 20px;
-        text-align: center;
         color: $text-color;
     }
 
     li { display: inline-block; }
   
-    a {
-        display: block;
-        padding: 6px 12px;
-        cursor: pointer;
-        margin-right: 5px;
-        height: 50px;
-        width: 100px;
-        line-height: 50px;
-        text-decoration: none;
-        transition: background-color 0.5s, transform 0.5s;
-        color: $text-color;
-    }
-    a:hover {
-        background-color: $hover-color;
-        text-decoration: underline;
-        transform: scale(1.25);
-    }
+    a { color: $text-color; }
+
+    a:hover { background-color: $hover-color;}
+}
+
+@mixin modal($m-color: #ccccee, $text-color: #424a4f) {
+    background-color: $m-color;
+    color: $text-color;
+}
+
+body {
+    padding-top: 40px;
+    font-family: Poppins;
+    text-align: center;
+    transition: background-color 1s, color 1s;
+}
+
+.topnav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    position: fixed;
+    font-family: Poppins;
+    font-size: 20px;
+    text-align: center;
+}
+
+.topnav a {
+    display: block;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-right: 5px;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    text-decoration: none;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.topnav a:hover {
+    text-decoration: underline;
+    transform: scale(1.25);
 }
 
 @media (prefers-color-scheme: light) {
@@ -59,13 +73,91 @@
     body{ 
         @include defaultBody;
     }
+    .modal-content {
+        @include modal;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
     nav {
-        @include navLayout( #555, white, #777);
+        @include navLayout(#575760, white, #777783);
     }
     body {
-        @include defaultBody($bg-color: #333, $txt-color: white);
+        @include defaultBody(#333339,white);
     }
+    .modal-content {
+        @include modal(#525255, white);
+    }
+}
+
+.minecraft {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 25px;
+    text-decoration: none;
+    
+}
+.list{
+    cursor: pointer;
+}
+
+
+.modal{
+    z-index:3;
+    display:none;
+    padding-top:100px;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color:rgba(0,0,0,0.75);
+}
+
+.modal-content{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    //margin: 10vw 85vh;
+    margin: auto;
+    position: relative;
+    border-radius: 20px;
+    padding: 0;
+    outline: 0;
+    width: 50vh;
+    height: 25vh;
+    z-index: 2;
+    //position: absolute;
+    top: 22.5vh;
+    //left: 50vw;
+
+}
+.centering {
+    text-align: center;
+}
+
+.display-topright{
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+.close{
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 20px;
+    bottom: 0;
 }
