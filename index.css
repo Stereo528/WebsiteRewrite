@@ -11,14 +11,14 @@
     position: fixed;
 }
 
-.header-content-links {
+.header-content-pages {
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 5px 20px;
 }
 
-.header-content-links a {
+.header-content-pages a {
     display: fixed;
     color: White;
     font-family: Poppins;
@@ -33,6 +33,12 @@
     width: 100%;
     line-height: 50px;
     text-decoration: none;
+    transition: transform 0.5s, text-decoration 0.5s;
+}
+
+.header-content-pages a:hover {
+    transform: scale(1.25);
+    text-decoration: underline;
 }
 
 .header-content-right {
@@ -53,6 +59,11 @@
     color: White;
     font-family: Poppins;
     font-size: 20px;
+    transition: transform 0.5s;
+}
+
+.header-content-right a:hover {
+    transform: scale(1.25);
 }
 
 .cool-background h1 {
