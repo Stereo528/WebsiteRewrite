@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.header {
+    width: 100vw;
+    height: 64px;
+    display: flex;
+    background-color: #333;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+
+.header-content-links {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 20px;
+}
+
+.header-content-links a {
+    display: fixed;
+    color: White;
+    font-family: Poppins;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-right: 25px;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.header-content-right {
+    display: flex;
+    justify-content: right;
+    align-content: right;
+    align-items: right;
+    text-align: center;
+    padding: 7.5px 20px;
+    width: 100%;
+}
+
+.header-content-right a {
+    justify-content: right;
+    align-content: right;
+    align-items: right;
+    margin-right: 15px;
+    color: White;
+    font-family: Poppins;
+    font-size: 20px;
+}
+
+.cool-background h1 {
+    padding-top: 5vh;
+    color: rgb(29, 29, 29);
+    font-family: Poppins;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+}
