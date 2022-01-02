@@ -63,7 +63,7 @@ body {
     align-content: right;
     align-items: right;
     text-align: center;
-    padding: 7.5px 20px;
+    padding: 12.5px 20px;
     width: 100%;
 }
 
@@ -72,6 +72,12 @@ body {
     color: var(--light-color);
     font-size: 20px;
     transition: transform 0.5s;
+}
+
+.header-content-right i {
+    width: 48px;
+    height: 48px;
+    color: var(--light-color);
 }
 
 .header-content-right a:hover {
