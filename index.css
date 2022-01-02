@@ -1,10 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+:root {
+    font-family: Poppins;
+    --light-color: #faf8ff;
+    --dark-color: #474555;
+    --gray-color: #777586;
+    --accent-color: #4457a9;
+    --generic-gradient: linear-gradient(45deg, rgba(31,50,131,1) 0%, rgba(143,55,137,1) 20%, rgba(214,76,123,1) 40%, rgba(255,123,100,1) 60%, rgba(255,185,87,1) 80%, rgba(249,248,113,1) 100%);
+}
+
+
+body {
+    background-color: var(--light-color);
+    place-items: center;
+    margin-top: 64px;
+    height: calc(100vh - 72px)
+}
+
 .header {
     width: 100vw;
     height: 64px;
     display: flex;
-    background-color: #333;
+    background-color: var(--dark-color);
     overflow: hidden;
     left: 0;
     top: 0;
@@ -20,8 +37,7 @@
 
 .header-content-pages a {
     display: fixed;
-    color: White;
-    font-family: Poppins;
+    color: var(--light-color);
     font-size: 20px;
     text-align: center;
     cursor: pointer;
@@ -52,12 +68,8 @@
 }
 
 .header-content-right a {
-    justify-content: right;
-    align-content: right;
-    align-items: right;
     margin-right: 15px;
-    color: White;
-    font-family: Poppins;
+    color: var(--light-color);
     font-size: 20px;
     transition: transform 0.5s;
 }
@@ -66,13 +78,28 @@
     transform: scale(1.25);
 }
 
-.cool-background h1 {
-    padding-top: 5vh;
-    color: rgb(29, 29, 29);
-    font-family: Poppins;
+.page-title {
+    border: 5px solid var(--accent-color);
+}
+.page-content {
+    text-align: center;
+    line-height: 25px;
+    padding: 0 9px;
+    border: 5px solid var(--accent-color);
+}
+
+.page {
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    color: var(--dark-color);
     justify-content: center;
     align-content: center;
     align-items: center;
     text-align: center;
-    font-size: 50px;
+    font-size: 25px;
+}
+
+.page a {
+    color: var(--gray-color);
 }
