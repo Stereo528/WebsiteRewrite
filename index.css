@@ -56,6 +56,10 @@ body {
     text-decoration: underline;
 }
 
+.header-icon {
+    padding-top: 4px;
+}
+
 .header-content-right {
     display: flex;
     justify-content: right;
@@ -102,4 +106,9 @@ body {
 
 .page a {
     color: var(--gray-color);
+    transition: color 0.25s;
+}
+
+.page a:hover {
+    color: var(--accent-color);
 }
