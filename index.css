@@ -112,3 +112,16 @@ body {
 .page a:hover {
     color: var(--accent-color);
 }
+
+.project-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.project-description {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+}
