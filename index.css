@@ -93,16 +93,6 @@ body {
     line-height: 25px;
     padding: 0 9px;
     border: 5px solid var(--accent-color);
-    width: 50vw;
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 720px) {
-    .page-content {
-        line-height: 25px;
-        padding: 0 9px;
-        border: 5px solid var(--accent-color);
-    }
-    
 }
 
 .page {
